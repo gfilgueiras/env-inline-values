@@ -1,0 +1,80 @@
+{
+  "name": "env-inline-values",
+  "displayName": "Env Inline Values",
+  "description": "Show resolved .env variable values inline in any file (Docker, Makefile, YAML, etc.)",
+  "version": "1.0.0",
+  "publisher": "gfilgueiras",
+  "author": {
+    "name": "Gustavo Filgueiras"
+  },
+  "license": "MIT",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "files": [
+    "images",
+    "CHANGELOG.md",
+    "extension.js",
+    "icon.png",
+    "LICENSE",
+    "README.md"
+  ],
+  "categories": [
+    "Languages"
+  ],
+  "keywords": [
+    "env",
+    "dotenv",
+    "environment",
+    "docker",
+    "makefile",
+    "variables",
+    "inline",
+    "productivity"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gfilgueiras/env-inline-values"
+  },
+  "contributes": {
+    "configuration": {
+      "title": "Env Inline Values",
+      "properties": {
+        "envInlineValues.files": {
+          "type": "array",
+          "default": [
+            ".env"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "description": "List of files or extensions where the extension is active"
+        },
+        "envInlineValues.textColor": {
+          "type": "string",
+          "default": "#495765",
+          "description": "Inline text color"
+        },
+        "envInlineValues.backgroundColor": {
+          "type": "string",
+          "default": "",
+          "description": "Inline text background color (empty = transparent)"
+        },
+        "envInlineValues.italic": {
+          "type": "boolean",
+          "default": true,
+          "description": "Render inline text in italic"
+        }
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/gfilgueiras/env-inline-values/issues"
+  },
+  "homepage": "https://github.com/gfilgueiras/env-inline-values#readme"
+}
